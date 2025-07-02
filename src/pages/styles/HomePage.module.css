@@ -1,0 +1,123 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* only hide horizontal scroll */
+  /* font-family: sans-serif; */
+  /* background-color: #f9f7fc; */
+  background: linear-gradient(120deg, #f9f9f9, #e6e4f0, #d2cde1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.navContainer {
+  display: flex;
+  position: relative;
+  gap: 24px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 1rem;
+  width: 100vw;
+  box-sizing: border-box;
+  /* background: linear-gradient(to bottom, #ffffff 0%, #dcd1e9 58%, #cbbbdd 100%); */
+  box-shadow: 10px 10px 10px grey;
+}
+
+.section {
+  flex: 1;
+  /* padding: 1rem; */
+}
+
+.rightMostSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.inputWithIcon {
+  display: flex;
+  align-items: center;
+  background-color: #eae8f8; /* pale lilac */
+  padding: 0.5rem 0.75rem; /* some breathing room */
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+  justify-content: center;
+}
+
+.inputWithIcon:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputWithIcon input {
+  flex: 1;
+  background: transparent; /* inherit wrapper bg */
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0; /* wrapper handles padding */
+  color: #333;
+}
+
+.inputWithIcon input::placeholder {
+  color: #777;
+}
+
+.inputWithIcon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: #555;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  transition: fill 0.2s ease;
+}
+
+.inputWithIcon svg:hover {
+  fill: #3b82f6; /* match your navLink hover */
+}
+
+/* optional: ensure the icon vertically centers exactly even if font-size changes */
+.inputWithIcon > * {
+  display: inline-flex;
+  align-items: center;
+}
+
+.otherIcons {
+  display: flex;
+  gap: 16px;
+}
+.navbar {
+  display: flex;
+  gap: 1.5rem;
+  font-family: "Telex", sans-serif;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #3b82f6;
+}
+
+.companyName {
+  font-family: "Nunito";
+  font-weight: 800;
+  font-size: 32px !important;
+}
+
+.contentSection {
+}
