@@ -50,6 +50,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.2s ease;
   justify-content: center;
+  background-color: #ccc;
 }
 
 .inputWithIcon:hover {
@@ -120,4 +121,28 @@ body {
 }
 
 .contentSection {
+  display: flex;
+  flex: 1; /* ← allow this row to grow and fill */
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  /* gap: 2rem;  */
+}
+
+/* 2) Use flex settings instead of fixed widths */
+.sidebar {
+  flex: 0 0 10%; /* basis = 30%, no grow, no shrink */
+  border-right: 1px solid #ccc;
+}
+
+.mainContent {
+  flex: 1; /* take the rest of the space */
+  /* border: 1px solid #ccc; */
+}
+
+.mainContent img {
+  width: 1200px;
+  /* height: 600px; */
+  position: absolute;
+  height: 300px;
+  left: 30%;
 }

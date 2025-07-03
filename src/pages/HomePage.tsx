@@ -2,6 +2,8 @@ import React from "react";
 import style from "./styles/HomePage.module.css";
 import { Link } from "react-router-dom";
 import { Cart, Favorite, Search } from "../assets/icons";
+import SideBar from "../components/SideBar";
+import mainImage from "../assets/main-image.png";
 const HomePage = () => {
   //HomePage - design
   //navbar in the top
@@ -49,7 +51,14 @@ const HomePage = () => {
         </div>
       </div>
       {/* Div containing the content section of the page - will have the whole product listing */}
-      <div className={style.contentSection}></div>
+      <div className={style.contentSection}>
+        <div className={style.sidebar}>
+          <SideBar />
+        </div>
+        <div className={style.mainContent}>
+          <img src={mainImage} alt="Main Image" />
+        </div>
+      </div>
     </div>
   );
 };
